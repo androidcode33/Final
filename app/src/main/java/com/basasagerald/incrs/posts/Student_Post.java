@@ -124,7 +124,6 @@ public class Student_Post extends Fragment implements SheetLayout.OnFabAnimation
     public void onFabAnimationEnd() {
         Intent intent = new Intent(getActivity(), Post_Question.class);
         startActivityForResult(intent, REQUEST_CODE);
-
     }
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {

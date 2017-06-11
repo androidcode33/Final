@@ -1,7 +1,6 @@
 package com.basasagerald.incrs.posts;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
@@ -21,8 +20,6 @@ public class Post_Question extends Animation_Fab {
         setContentView(R.layout.post_question);
 
         setUpToolbarWithTitle(getString(R.string.COMP), true);
-
-
     }
     @Override
     protected void onPause() {
