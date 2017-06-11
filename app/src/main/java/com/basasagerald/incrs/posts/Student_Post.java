@@ -1,6 +1,9 @@
 package com.basasagerald.incrs.posts;
 
+import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
@@ -86,6 +89,7 @@ public class Student_Post extends Fragment implements SheetLayout.OnFabAnimation
         }));
 
         preparePostData();
+        checkConnection();
     }
     private void preparePostData() {
        Student_Model post = new Student_Model("Health", "best description");
@@ -119,7 +123,15 @@ public class Student_Post extends Fragment implements SheetLayout.OnFabAnimation
 
         mAdapter.notifyDataSetChanged();
     }
+public void checkConnection(){
 
+    ConnectivityManager connManager = (ConnectivityManager)getContext().getSystemService(Context.CONNECTIVITY_SERVICE);
+    NetworkInfo mWifi = connManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
+
+    if (mWifi.isConnected()) {
+        // Do whatever
+    }
+}
     @Override
     public void onFabAnimationEnd() {
         Intent intent = new Intent(getActivity(), Post_Question.class);
