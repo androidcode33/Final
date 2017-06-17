@@ -66,43 +66,43 @@ public class Lecturer_Post extends Fragment{
             @Override
             public void onLongClick(View view, int position) {
                 Lecturer_Model post = postList.get(position);
-                Toast.makeText(getActivity(), post.getTitle() + " is selected!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), post.getQuestion() + " is selected!", Toast.LENGTH_SHORT).show();
             }
         }));
 
-        preparePostData();
+        //preparePostData();
     }
 
-    private void preparePostData() {
-        Lecturer_Model post = new Lecturer_Model("Health", "best description");
-        postList.add(post);
-
-        post = new Lecturer_Model("understood", "i have not understood that point 1");
-        postList.add(post);
-
-        post = new Lecturer_Model("last slide", "what does deny mean?");
-        postList.add(post);
-
-        post = new Lecturer_Model("tired", "its some students are tired");
-        postList.add(post);
-
-        post = new Lecturer_Model("feeed back", "feed back on our project");
-        postList.add(post);
-
-        post = new Lecturer_Model("deadline", "When is the deadline for course work");
-        postList.add(post);
-
-
-
-        post = new Lecturer_Model("security", "i have not understood that");
-        postList.add(post);
-
-        post = new Lecturer_Model("last slide", "how to hack");
-        postList.add(post);
-
-        post = new Lecturer_Model("papers", "Our test question papers");
-        postList.add(post);
-
-        mAdapter.notifyDataSetChanged();
-    }
+//    private void preparePostData() {
+//        Lecturer_Model post = new Lecturer_Model("Health", "best description");
+//        postList.add(post);
+//
+//        post = new Lecturer_Model("understood", "i have not understood that point 1");
+//        postList.add(post);
+//
+//        post = new Lecturer_Model("last slide", "what does deny mean?");
+//        postList.add(post);
+//
+//        post = new Lecturer_Model("tired", "its some students are tired");
+//        postList.add(post);
+//
+//        post = new Lecturer_Model("feeed back", "feed back on our project");
+//        postList.add(post);
+//
+//        post = new Lecturer_Model("deadline", "When is the deadline for course work");
+//        postList.add(post);
+//
+//
+//
+//        post = new Lecturer_Model("security", "i have not understood that");
+//        postList.add(post);
+//
+//        post = new Lecturer_Model("last slide", "how to hack");
+//        postList.add(post);
+//
+//        post = new Lecturer_Model("papers", "Our test question papers");
+//        postList.add(post);
+//
+//        mAdapter.notifyDataSetChanged();
+//    }
 }
